@@ -16,6 +16,7 @@ h1 {
 }
 
 h2 {
+    height: 80px;
     font-size: 25px;
     text-align: center;
     color: #FFFFFF;
