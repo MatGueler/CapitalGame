@@ -16,7 +16,11 @@ h1 {
     color: #FFFFFF;
 }
 
-button {
+& button{
     margin: 20px 0;
+}
+
+& button:hover{
+    box-shadow:  3px 3px #FFFFFF;
 }
 `
