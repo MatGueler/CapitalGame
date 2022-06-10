@@ -27,42 +27,36 @@ function Brazil() {
                 { estado: 'Espírito Santo', capital: 'Vitória' },
                 { estado: 'São Paulo', capital: 'São Paulo' },
                 { estado: 'Pernambuco', capital: 'Recife' },
-                { estado: 'Alagoas', capital: 'Maceió' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
-                // { estado: 'Rio grande do sul', capital: 'Porto alegre' }
+                { estado: 'Alagoas', capital: 'Maceió' },
+                { estado: 'Tocantins', capital: 'Palmas' },
+                { estado: 'Paraíba', capital: 'João Pessoa' },
+                { estado: 'Maranhão', capital: 'São Luís' },
+                { estado: 'Amazônas', capital: 'Manaus' },
+                { estado: 'Pará', capital: 'Belém' },
+                { estado: 'Paraná', capital: 'Curitiba' },
+                { estado: 'Mato Grosso', capital: 'Cuiabá' },
+                { estado: 'Santa Catarina', capital: 'Florianópolis' },
+                { estado: 'Brasília', capital: '' },
+                { estado: 'Acre', capital: 'Rio Branco' },
+                { estado: 'Minas Gerais', capital: 'Belo Horizonte' },
+                { estado: 'Mato Grosso do sul', capital: 'Campo Grande' },
+                { estado: 'Piauí', capital: 'Teresina' },
+                { estado: 'Amapá', capital: 'Macapá' },
+                { estado: 'Roraima', capital: 'Boa Vista' },
+                { estado: 'Ceará', capital: 'Fortaleza' },
+                { estado: 'Goiás', capital: 'Goiânia' },
+                { estado: 'Rondônia', capital: 'Porto velho' },
+                { estado: 'Bahia', capital: 'Salvador' },
+                { estado: 'Rio grande do Norte', capital: 'Natal' },
+                { estado: 'Sergipe', capital: 'Aracaju' }
             ]
 
         let questions = capials.sort(comparador)
         SetQuestions(questions)
 
-        console.log(questions)
-
     }, [])
 
     function Choose(number, setNumber, item) {
-
-        console.log(questions[(number)].capital)
-
-        console.log(questions[(item)].capital)
 
         if (number < questions.length - 1) {
             let newNumber = number + 1;
