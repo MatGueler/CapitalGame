@@ -140,6 +140,9 @@ function USA() {
                 <Answers>
                     {alternatives.map((item, index) => <Button key={index} onClick={() => Choose(number, setNumber, item)}> {letters[index]}) {questions[(item)].capital}</Button>)}
                 </Answers>
+                <Correction>
+                    {correction.map((item, index) => <h2 key={index}>{item}</h2>)}
+                </Correction>
             </>
         )
     }
