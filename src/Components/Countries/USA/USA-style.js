@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
-height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
 margin: 0 20px;
 
 h1 {
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 h2 {
