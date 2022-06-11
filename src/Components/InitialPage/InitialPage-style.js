@@ -12,7 +12,9 @@ box-sizing: border-box;
 
 img {
     width: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    box-shadow: 8px 8px rgba(0,0,20,.3);
 }
 
 h1 {

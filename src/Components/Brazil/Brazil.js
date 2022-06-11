@@ -1,13 +1,18 @@
 import { useEffect, useState, useContext } from "react";
 import { Container } from "../Container/Container";
 import { Button } from '../Button/Button'
-import { Main, Answers } from "./Brazil-style";
+import { Main, Answers, Correction } from "./Brazil-style";
 import { useNavigate } from "react-router-dom";
 import PontuationContext from "../Context/PontuationContext";
+import { Back } from '../Button/BackButton'
+import { TiArrowBack } from 'react-icons/ti';
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 function Brazil() {
 
     const [number, setNumber] = useState(0)
+    const [correction, setCorrection] = useState([]);
 
     const { pontuation, setPontuation, setPercentage, questions, SetQuestions } = useContext(PontuationContext)
 
@@ -64,13 +69,21 @@ function Brazil() {
         else {
             alert('voce acabou!')
             navigate('/score')
-
         }
 
         if (questions[(number)].capital === questions[(item)].capital) {
-            let point = pontuation + 1
+            let point = pontuation + 1;
+            let u = correction
+            u.push(<BsFillCheckCircleFill color="green" />)
+            setCorrection(u)
+            console.log(correction)
             setPontuation(point)
             setPercentage(Math.floor((point / questions.length) * 100))
+        }
+        else {
+            let u = correction
+            u.push(<AiFillCloseCircle color="red" />)
+            setCorrection(u)
         }
     }
 
@@ -105,6 +118,9 @@ function Brazil() {
                 <Answers>
                     {alternatives.map((item, index) => <Button key={index} onClick={() => Choose(number, setNumber, item)}> {letters[index]}) {questions[(item)].capital}</Button>)}
                 </Answers>
+                <Correction>
+                    {correction.map((item, index) => <h2 key={index}>{item}</h2>)}
+                </Correction>
             </>
         )
     }
@@ -112,6 +128,9 @@ function Brazil() {
 
     return (
         <Container>
+            <Back onClick={() => navigate('/niveis')}>
+                <TiArrowBack color="white" size={30} />
+            </Back>
             <Main>
                 <h1>Capitais brasileiras</h1>
                 {(questions.length > 0 ? <ShowQuestion /> : '')}

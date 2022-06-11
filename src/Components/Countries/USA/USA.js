@@ -1,13 +1,16 @@
 import { useEffect, useState, useContext } from "react";
 import { Container } from "../../Container/Container";
 import { Button } from '../../Button/Button'
-import { Main, Answers } from "./USA-style";
+import { Main, Answers, Correction } from "./USA-style";
 import { useNavigate } from "react-router-dom";
 import PontuationContext from "../../Context/PontuationContext";
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 function USA() {
 
-    const [number, setNumber] = useState(0)
+    const [number, setNumber] = useState(0);
+    const [correction, setCorrection] = useState([]);
 
     const { pontuation, setPontuation, setPercentage, questions, SetQuestions } = useContext(PontuationContext)
 
@@ -91,9 +94,18 @@ function USA() {
         }
 
         if (questions[(number)].capital === questions[(item)].capital) {
-            let point = pontuation + 1
+            let point = pontuation + 1;
+            let u = correction
+            u.push(<BsFillCheckCircleFill color="green" />)
+            setCorrection(u)
+            console.log(correction)
             setPontuation(point)
             setPercentage(Math.floor((point / questions.length) * 100))
+        }
+        else {
+            let u = correction
+            u.push(<AiFillCloseCircle color="red" />)
+            setCorrection(u)
         }
     }
 

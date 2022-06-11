@@ -1,12 +1,15 @@
 import { useEffect, useState, useContext } from "react";
 import { Container } from "../../Container/Container";
 import { Button } from '../../Button/Button'
-import { Main, Answers } from "./Germany-style";
+import { Main, Answers, Correction } from "./Germany-style";
 import { useNavigate } from "react-router-dom";
 import PontuationContext from "../../Context/PontuationContext";
+import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 function Germany() {
     const [number, setNumber] = useState(0)
+    const [correction, setCorrection] = useState([])
 
     const { pontuation, setPontuation, setPercentage, questions, SetQuestions } = useContext(PontuationContext)
 
@@ -90,9 +93,18 @@ function Germany() {
         }
 
         if (questions[(number)].capital === questions[(item)].capital) {
-            let point = pontuation + 1
+            let point = pontuation + 1;
+            let u = correction
+            u.push(<BsFillCheckCircleFill color="green" />)
+            setCorrection(u)
+            console.log(correction)
             setPontuation(point)
             setPercentage(Math.floor((point / questions.length) * 100))
+        }
+        else {
+            let u = correction
+            u.push(<AiFillCloseCircle color="red" />)
+            setCorrection(u)
         }
     }
 
@@ -127,6 +139,9 @@ function Germany() {
                 <Answers>
                     {alternatives.map((item, index) => <Button key={index} onClick={() => Choose(number, setNumber, item)}> {letters[index]}) {questions[(item)].capital}</Button>)}
                 </Answers>
+                <Correction>
+                    {correction.map((item, index) => <h2 key={index}>{item}</h2>)}
+                </Correction>
             </>
         )
     }
