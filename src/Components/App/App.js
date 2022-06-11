@@ -9,6 +9,8 @@ import Countries from "../Countries/Countries";
 import PontuationContext from '../Context/PontuationContext'
 import { useState } from "react";
 import Germany from "../Countries/Germany/Germany";
+import Italy from "../Countries/Italy/Italy";
+import Argentina from "../Countries/Argentina/Argentina";
 
 function App() {
 
@@ -27,8 +29,8 @@ function App() {
           <Route path="/paises" element={< Countries />} />
           <Route path="/usa" element={< USA />} />
           <Route path="/alemanha" element={< Germany />} />
-          <Route path="/italia" element={< Countries />} />
-          {/* <Route path="/paises" element={< Countries />} /> */}
+          <Route path="/italia" element={< Italy />} />
+          <Route path="/argentina" element={< Argentina />} />
           <Route path="/continentes" element={< Continent />} />
           <Route path="/score" element={< Score />} />
         </Routes>
