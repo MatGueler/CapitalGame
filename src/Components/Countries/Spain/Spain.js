@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react";
 import { Container } from "../../Container/Container";
 import { Button } from '../../Button/Button'
-import { Main, Answers } from "./Italy-style";
+import { Main, Answers } from "./Spain-style";
 import { useNavigate } from "react-router-dom";
 import PontuationContext from "../../Context/PontuationContext";
 
-function Italy() {
+function Spain() {
 
     const [number, setNumber] = useState(0)
 
@@ -21,26 +21,22 @@ function Italy() {
 
         const capials =
             [
-                { estado: 'Piemonte', capital: 'Turim' },
-                { estado: 'Vale de Aosta', capital: 'Aosta' },
-                { estado: 'Lombardia', capital: 'Milão' },
-                { estado: 'Trentino-Alto Ádige', capital: 'Trento' },
-                { estado: 'Vêneto', capital: 'Veneza' },
-                { estado: 'Friul-Veneza Júlia', capital: 'Trieste' },
-                { estado: 'Emília-Romanha', capital: 'Bolonha' },
-                { estado: 'Marcas', capital: 'Ancona' },
-                { estado: 'Abruzos', capital: 'Áquila' },
-                { estado: 'Molise', capital: 'Campobasso' },
-                { estado: 'Apúlia', capital: 'Bari' },
-                { estado: 'Basilicata', capital: 'Potenza' },
-                { estado: 'Calábria', capital: 'Catanzaro' },
-                { estado: 'Campânia', capital: 'Nápoles' },
-                { estado: 'Lácio', capital: 'Roma' },
-                { estado: 'Úmbria', capital: 'Perúgia' },
-                { estado: 'Toscana', capital: 'Florença' },
-                { estado: 'Ligúria', capital: 'Gênova' },
-                { estado: 'Sardenha', capital: 'Cálhari' },
-                { estado: 'Sicília', capital: 'Palermo' }
+                { estado: 'Baden-Württemberg', capital: 'Stuttgart' },
+                { estado: 'Baixa Saxônia', capital: 'Hanôver' },
+                { estado: 'Baviera', capital: 'Munique' },
+                { estado: 'Berlim', capital: 'Nenhuma' },
+                { estado: 'Brandemburgo', capital: 'Potsdam' },
+                { estado: 'Bremen', capital: 'Nenhuma' },
+                { estado: 'Hamburgo', capital: 'Nenhuma' },
+                { estado: 'Hesse', capital: 'Wiesbaden' },
+                { estado: 'Mecklemburgo-Pomerânia Ocidental', capital: 'Schwerin' },
+                { estado: 'Renânia do Norte-Vestfália', capital: 'Düsseldorf' },
+                { estado: 'Renânia-Palatinado', capital: 'Mogúncia' },
+                { estado: 'Sarre', capital: 'Saarbrücken' },
+                { estado: 'Saxônia', capital: 'Dresda' },
+                { estado: 'Saxônia-Anhalt', capital: 'Magdeburgo' },
+                { estado: 'Schleswig-Holstein', capital: 'Kiel' },
+                { estado: 'Turíngia', capital: 'Erfurt' }
             ]
 
         let questions = capials.sort(comparador)
@@ -113,4 +109,4 @@ function Italy() {
     )
 }
 
-export default Italy;
+export default Spain;

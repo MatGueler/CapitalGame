@@ -15,6 +15,7 @@ function Countries() {
                 <Button onClick={() => navigate('/italia')} >Itália</Button>
                 <Button onClick={() => navigate('/alemanha')} >Alemanha</Button>
                 <Button onClick={() => navigate('/argentina')} >Argentina</Button>
+                <Button onClick={() => navigate('/espanha')} >Espanha</Button>
             </Main>
         </Container>
     )

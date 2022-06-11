@@ -11,6 +11,7 @@ import { useState } from "react";
 import Germany from "../Countries/Germany/Germany";
 import Italy from "../Countries/Italy/Italy";
 import Argentina from "../Countries/Argentina/Argentina";
+import Spain from "../Countries/Spain/Spain";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/alemanha" element={< Germany />} />
           <Route path="/italia" element={< Italy />} />
           <Route path="/argentina" element={< Argentina />} />
+          <Route path="/espanha" element={< Spain />} />
           <Route path="/continentes" element={< Continent />} />
           <Route path="/score" element={< Score />} />
         </Routes>
