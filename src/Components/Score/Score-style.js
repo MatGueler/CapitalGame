@@ -9,11 +9,13 @@ justify-content: center;
 align-items: center;
 
 h1 {
+    text-align: center;
     font-size: 60px;
     color: #FFFFFF;
 }
 
 h2 {
+    text-align: center;
     font-size: 100px;
     background-color: white;
     border-radius: 10px;
