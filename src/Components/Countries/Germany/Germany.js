@@ -156,7 +156,7 @@ function Germany() {
                 <TiArrowBack color="white" size={30} />
             </Back>
             <Main>
-                <h1>Capitais estadunidenses</h1>
+                <h1>Capitais alemãs</h1>
                 {(questions.length > 0 ? <ShowQuestion /> : '')}
             </Main>
         </Container>
