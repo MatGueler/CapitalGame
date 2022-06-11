@@ -7,10 +7,9 @@ import PontuationContext from "../Context/PontuationContext";
 
 function Brazil() {
 
-    const [questions, SetQuestions] = useState([])
     const [number, setNumber] = useState(0)
 
-    const { pontuation, setPontuation, setPercentage } = useContext(PontuationContext)
+    const { pontuation, setPontuation, setPercentage, questions, SetQuestions } = useContext(PontuationContext)
 
     let navigate = useNavigate();
 

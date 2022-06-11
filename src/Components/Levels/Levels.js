@@ -14,7 +14,7 @@ function Levels() {
             <Main>
                 <h1>Estilo de jogo</h1>
                 <Button back='yellow' onClick={() => navigate('/brasil')}>Brasil</Button>
-                <Button back='orange' onClick={() => alert('Esse modo estará disponível em breve')}>Países</Button>
+                <Button back='orange' onClick={() => navigate('/paises')}>Países</Button>
                 <Button back='red' onClick={() => alert('Esse modo estará disponível em breve')}>Continentes</Button>
             </Main>
         </Container>

@@ -7,14 +7,15 @@ import { Menu, Main } from './Score-style'
 
 function Score() {
 
-    const { pontuation, percentage } = useContext(PontuationContext)
+    const { pontuation, percentage, questions } = useContext(PontuationContext)
+
 
     let navigate = useNavigate()
 
     return (
         <Container>
             <Main>
-                <h1>Você acertou</h1>
+                <h1>Você acertou {pontuation}/{questions.length}</h1>
                 <h2>{percentage}%</h2>
                 <Menu onClick={() => navigate('/niveis')}>
                     Voltar ao início
