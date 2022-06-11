@@ -119,7 +119,8 @@ function Germany() {
             ]
 
         while (alternatives.length < 4) {
-            let sort = Math.floor(Math.random() * 6);
+            let sort = 0;
+            sort = Math.floor(Math.random() * (questions.length - 1))
             let verificador = 0;
             for (let counter = 0; counter < alternatives.length; counter++) {
                 if (alternatives[counter] === sort) {

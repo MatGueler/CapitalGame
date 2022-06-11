@@ -36,18 +36,17 @@ button {
 `
 
 export const Correction = styled.div`
-height: 100px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-margin: 20px 0;
+margin: 5px 0;
 
 h2 {
-    height: 80px;
-    font-size: 25px;
+    height: 25px;
+    font-size: 20px;
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 `
