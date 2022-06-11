@@ -16,6 +16,14 @@ h1 {
 
 button {
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+    margin:  0 20px;
 }
 `
 

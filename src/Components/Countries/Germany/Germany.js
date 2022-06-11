@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import PontuationContext from "../../Context/PontuationContext";
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { Back } from '../../Button/BackButton'
+import { TiArrowBack } from 'react-icons/ti';
 
 function Germany() {
     const [number, setNumber] = useState(0)
@@ -150,6 +152,9 @@ function Germany() {
 
     return (
         <Container>
+            <Back onClick={() => navigate('/niveis')}>
+                <TiArrowBack color="white" size={30} />
+            </Back>
             <Main>
                 <h1>Capitais estadunidenses</h1>
                 {(questions.length > 0 ? <ShowQuestion /> : '')}

@@ -40,7 +40,7 @@ function Brazil() {
                 { estado: 'Paraná', capital: 'Curitiba' },
                 { estado: 'Mato Grosso', capital: 'Cuiabá' },
                 { estado: 'Santa Catarina', capital: 'Florianópolis' },
-                { estado: 'Brasília', capital: '' },
+                { estado: 'Distrito Federal', capital: 'Brasília' },
                 { estado: 'Acre', capital: 'Rio Branco' },
                 { estado: 'Minas Gerais', capital: 'Belo Horizonte' },
                 { estado: 'Mato Grosso do sul', capital: 'Campo Grande' },
